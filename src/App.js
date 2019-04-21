@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import heroes from "../heroes.json";
+import heroes from "./heroes.json";
 import Wrapper from "./components/Wrapper";
 import Nav from "./components/Nav";
+import Header from "./components/Header";
 import GameBoard from "./components/GameBoard";
 import Footer from "./components/Footer";
 import Card from "./components/Card";
@@ -47,6 +48,7 @@ class App extends Component {
     alert(`Game Over :( \nFinal Score: ${this.state.score})`)
     // set score to 0 
     this.setState({ score: 0 });
+    return true;
   }
 
   // function for when a card is clicked on
@@ -62,6 +64,7 @@ class App extends Component {
           this.setState({ score: this.state.score + 1 });
           //shuffle the array
           this.shuffle(heroes);
+          return true
         } else {
           this.gameOver();
         }
@@ -71,27 +74,22 @@ class App extends Component {
 
   render() {
     return (
-      // Here is where I render component units
       <Wrapper>
         <Nav score={this.state.score} highScore={this.state.highScore} />
-        {/* <Header /> */}
-        {/* <GameBoard> */}
-          {/* loop through and display the cards */}
-          {this.state.heroes.map(hero => {
+        <Header />
+        <GameBoard>
+          {this.state.heroes.map(hero => (
             <Card
               clickCounter={this.clickCounter}
               id={hero.id}
               key={hero.name}
               image={hero.image}
             />
-          })}
-        {/* </GameBoard> */}
-        {/* <Footer /> */}
+          ))}
+        </GameBoard>
+        <Footer />
       </Wrapper>
-
-
-
-    );
+    )
   }
 }
 
