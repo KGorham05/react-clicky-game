@@ -1,10 +1,12 @@
 import React from "React";
 import "./style.css";
 
-function Nav {
+const Nav = props => {
     return (
         <div className="n-bar">
             <p className="">Clicky Game</p>
         </div>
     )
 }
+
+export default Nav

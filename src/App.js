@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import heroes from "../heroes.json"
+import heroes from "../heroes.json";
+import Wrapper from "./components/Wrapper";
+import Nav from "./components/Nav";
+import GameBoard from "./components/GameBoard";
+import Footer from "./components/Footer";
+import Card from "./components/Card";
 
 
 class App extends Component {
@@ -50,13 +55,13 @@ class App extends Component {
     this.state.heroes.find((obj, index) => {
       if (obj.id === id) {
         // check if it has been clicked on 
-        if (heroes[i].clicked === false) {
+        if (heroes[index].clicked === false) {
           // mark it as clicked 
-          heroes[i].clicked = true;
+          heroes[index].clicked = true;
           // increment score
           this.setState({ score: this.state.score + 1 });
           //shuffle the array
-          shuffle(heroes);
+          this.shuffle(heroes);
         } else {
           this.gameOver();
         }
@@ -69,7 +74,8 @@ class App extends Component {
       // Here is where I render component units
       <Wrapper>
         <Nav score={this.state.score} highScore={this.state.highScore} />
-        <GameBoard>
+        {/* <Header /> */}
+        {/* <GameBoard> */}
           {/* loop through and display the cards */}
           {this.state.heroes.map(hero => {
             <Card
@@ -79,8 +85,8 @@ class App extends Component {
               image={hero.image}
             />
           })}
-        </GameBoard>
-        <Footer />
+        {/* </GameBoard> */}
+        {/* <Footer /> */}
       </Wrapper>
 
 
