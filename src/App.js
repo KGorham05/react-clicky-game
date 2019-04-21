@@ -30,6 +30,20 @@ class App extends Component {
     return array;
   }
 
+  gameOver = () => {
+    // compare score to previous high score
+    // if higher set current score to high score
+    if (this.state.score > this.state.highScore) {
+      this.setState({ highScore: this.state.score })
+    }
+    // set all heroes.clicked = false
+    this.state.heroes.forEach(hero => hero.clicked = false)
+    // alert or trigger modal game over
+    alert(`Game Over :( \nFinal Score: ${this.state.score})`)
+    // set score to 0 
+    this.setState({ score: 0 });
+  }
+
   // function for when a card is clicked on
   clickCounter = id => {
     // identify which card was clicked
@@ -40,17 +54,14 @@ class App extends Component {
           // mark it as clicked 
           heroes[i].clicked = true;
           // increment score
-          this.setState({score: this.state.score + 1});
+          this.setState({ score: this.state.score + 1 });
           //shuffle the array
           shuffle(heroes);
-
+        } else {
+          this.gameOver();
         }
       }
-    })
-  }
-
-  gameOver = () => {
-
+    });
   }
 
   render() {
