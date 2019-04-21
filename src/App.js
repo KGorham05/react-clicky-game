@@ -32,7 +32,21 @@ class App extends Component {
 
   // function for when a card is clicked on
   clickCounter = id => {
+    // identify which card was clicked
+    this.state.heroes.find((obj, index) => {
+      if (obj.id === id) {
+        // check if it has been clicked on 
+        if (heroes[i].clicked === false) {
+          // mark it as clicked 
+          heroes[i].clicked = true;
+          // increment score
+          this.setState({score: this.state.score + 1});
+          //shuffle the array
+          shuffle(heroes);
 
+        }
+      }
+    })
   }
 
   gameOver = () => {
@@ -43,7 +57,7 @@ class App extends Component {
     return (
       // Here is where I render component units
       <Wrapper>
-        <Nav score={this.state.score} highscore={this.state.highScore} />
+        <Nav score={this.state.score} highScore={this.state.highScore} />
         <GameBoard>
           {/* loop through and display the cards */}
           {this.state.heroes.map(hero => {
