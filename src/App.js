@@ -64,11 +64,13 @@ class App extends Component {
           this.setState({ score: this.state.score + 1 });
           //shuffle the array
           this.shuffle(heroes);
-          return true
+          return true;
         } else {
           this.gameOver();
         }
+        
       }
+      // return true;
     });
   }
 
