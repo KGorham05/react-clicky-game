@@ -70,7 +70,7 @@ class App extends Component {
         }
         
       }
-      // return true;
+      return true;
     });
   }
 
