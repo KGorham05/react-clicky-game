@@ -54,6 +54,7 @@ class App extends Component {
   // function for when a card is clicked on
   clickCounter = id => {
     // identify which card was clicked
+    // eslint-disable-next-line
     this.state.heroes.find((obj, index) => {
       if (obj.id === id) {
         // check if it has been clicked on 
@@ -64,13 +65,15 @@ class App extends Component {
           this.setState({ score: this.state.score + 1 });
           //shuffle the array
           this.shuffle(heroes);
+          // ?? forEach option not working
           return true;
         } else {
           this.gameOver();
         }
-        
+
       }
-      return true;
+      // This breaks game only 1st box works
+      // return true;
     });
   }
 
