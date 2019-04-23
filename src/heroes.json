@@ -8,7 +8,7 @@
   {
     "id": 2,
     "name": "Black Panther",
-    "image": "./images/black-panther.jpg",
+    "image": "./images/black-panther.png",
     "clicked": false
   },
   {
@@ -20,7 +20,7 @@
   {
     "id": 4,
     "name": "Iron Man",
-    "image": "./images/ironman.jpg",
+    "image": "./images/ironman.png",
     "clicked": false
   },
   {
@@ -32,43 +32,43 @@
   {
     "id": 6,
     "name": "Spiderman",
-    "image": "./images/spiderman.jpg",
+    "image": "./images/spiderman.png",
     "clicked": false
   },
   {
     "id": 7,
     "name": "Superman",
-    "image": "./images/superman.jpg",
+    "image": "./images/superman.png",
     "clicked": false
   },
   {
     "id": 8,
     "name": "Wonder Woman",
-    "image": "./images/wonder-woman.jpg",
+    "image": "./images/wonder-woman.png",
     "clicked": false
   },
   {
     "id": 9,
     "name": "Thor",
-    "image": "./images/thor.jpg",
+    "image": "./images/thor.png",
     "clicked": false
   },
   {
     "id": 10,
     "name": "Green Lantern",
-    "image": "./images/green-lantern.jpg",
+    "image": "./images/green-lantern.png",
     "clicked": false
   },
   {
     "id": 11,
     "name": "Wolverine",
-    "image": "./images/wolverine.jpg",
+    "image": "./images/wolverine.png",
     "clicked": false
   },
   {
     "id": 12,
     "name": "Deadpool",
-    "image": "./images/deadpool.jpg",
+    "image": "./images/deadpool.png",
     "clicked": false
   }
 ]
