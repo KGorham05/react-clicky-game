@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import heroes from "./heroes.json";
 import Wrapper from "./components/Wrapper";
 import Nav from "./components/Nav";
-import Header from "./components/Header";
+import Header from "./components/Header"
 import GameBoard from "./components/GameBoard";
-import Footer from "./components/Footer";
 import Card from "./components/Card";
 
 
@@ -92,7 +91,6 @@ class App extends Component {
             />
           ))}
         </GameBoard>
-        <Footer />
       </Wrapper>
     )
   }

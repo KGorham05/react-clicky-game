@@ -4,8 +4,8 @@ import React from "react";
 const GameBoard = props => (
 
     <div className="game-board container">
-        <div className="row">
-            {props.children}
+        <div className="row text-center ">
+                {props.children}
         </div>
     </div>
 
